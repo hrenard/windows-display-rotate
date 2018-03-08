@@ -1,0 +1,21 @@
+{
+  "name": "windows-display-rotate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": "https://github.com/Hougo13/windows-display-rotate.git",
+  "author": "Hougo13 <hougo13@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node-gyp build -d",
+    "install": "node-gyp rebuild",
+    "example": "node example.js",
+    "example:dev": "cross-env DEBUG=1 node example.js"
+  },
+  "dependencies": {
+    "nan": "^2.9.2"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.3"
+  }
+}
