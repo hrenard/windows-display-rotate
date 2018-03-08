@@ -16,13 +16,13 @@ yarn add windows-display-rotate
 
 Start by require the module.
 
-```
+```javascript
 const WindowsDisplayRotate = require("windows-display-rotate");
 ```
 
 ### Get the number of screen
 
-```
+```javascript
 // Get only active displays
 let activeDisplays = WindowsDisplayRotate.size();
 
@@ -32,7 +32,7 @@ let allDisplays = WindowsDisplayRotate.size(true);
 
 ### Turn a display
 
-```
+```javascript
 WindowsDisplayRotate.clockwise(); // Successful => true
 WindowsDisplayRotate.counterClockwise(); // Successful => true
 
@@ -43,7 +43,7 @@ WindowsDisplayRotate.counterClockwise(0); // Successful => true
 
 ### Set the orientation of a display
 
-```
+```javascript
 WindowsDisplayRotate.doDefault(); // Successful => true
 WindowsDisplayRotate.do90(); // Successful => true
 WindowsDisplayRotate.do180(); // Successful => true
