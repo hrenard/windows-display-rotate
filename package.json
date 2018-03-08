@@ -6,6 +6,9 @@
   "repository": "https://github.com/Hougo13/windows-display-rotate.git",
   "author": "Hougo13 <hougo13@gmail.com>",
   "license": "MIT",
+  "os": [
+    "win32"
+  ],
   "scripts": {
     "build": "node-gyp build -d",
     "install": "node-gyp rebuild",
