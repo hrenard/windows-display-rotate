@@ -15,9 +15,9 @@ bool getDevmode(int id, DEVMODE *dm)
     DISPLAY_DEVICE lpDisplayDevice;
     lpDisplayDevice.cb = sizeof(DISPLAY_DEVICE);
     bool exist = EnumDisplayDevices(NULL, id, &lpDisplayDevice, EDD_GET_DEVICE_INTERFACE_NAME);
-
     if (exist)
     {
+
         if (lpDisplayDevice.StateFlags & DISPLAY_DEVICE_ACTIVE)
         {
             return EnumDisplaySettings(lpDisplayDevice.DeviceName, ENUM_CURRENT_SETTINGS, dm);
@@ -44,7 +44,11 @@ bool setOrientation(int id, DWORD displayOrientation)
 
         dm.dmDisplayOrientation = displayOrientation;
 
-        return ChangeDisplaySettings(&dm, 0) == DISP_CHANGE_SUCCESSFUL;
+        cout << dm.dmDeviceName << endl;
+
+        int res = ChangeDisplaySettings(&dm, 0);
+        cout << res << endl;
+        return res == DISP_CHANGE_SUCCESSFUL;
     }
 
     return false;
